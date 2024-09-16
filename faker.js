@@ -27,6 +27,6 @@ const generateData = (numRecords) =>
 
 const rows = process.argv[2];
 
-const data = generateData(rows || 100);
+const data = generateData(Number(rows) || 100);
 
 fs.writeFileSync('./public/data.json', JSON.stringify(data, null, 2));
