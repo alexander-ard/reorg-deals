@@ -1,41 +1,49 @@
 # reorg-deals
 
-This template should help get you started developing with Vue 3 in Vite.
+Hi! 👋
 
-## Recommended IDE Setup
+In this repo you'll find a Vue application that generates and uses JSON files as a source of data to render a dynamic grid component. It supports sorting, row selection, filtering, exporting as CSV and is responsive.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Runing the project:
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+### 1. Project Setup ▶️
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### 2. Generate fake data 🗄️
+
+This command uses `faker.js` to generate a `data.json` file, which will be used as a mock source of data.
+
+In this case, it will generate `1000` records, but you can generate any number of records.
+
+```sh
+npm run fake 1000
+```
+
+The `data.json` file has been setup to be ignored by git to avoid bloating the repo.
+
+### 3. Compile and Hot-Reload for Development 💻
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### 4. Navigate to the project at: 🌐
+
+```sh
+localhost:3000
+```
+
+### 5. Compile and Minify for Production 🚀
 
 ```sh
 npm run build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+### 6. Run Unit Tests with [Vitest](https://vitest.dev/)
 
 ```sh
 npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```

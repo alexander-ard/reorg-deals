@@ -5,18 +5,23 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run fake && vite build",
     "preview": "vite preview",
     "test:unit": "vitest",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore && prettier --write src/",
+    "fake": "node ./faker.js ",
+    "lint:style": "stylelint \"**/*.{vue,scss}\" --fix"
   },
   "dependencies": {
-    "pinia": "^2.1.7",
+    "@faker-js/faker": "^9.0.1",
+    "faker": "^6.6.6",
+    "json-server": "^1.0.0-beta.2",
+    "pinia": "^2.1.5",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"
   },
   "devDependencies": {
+    "@pinia/testing": "^0.1.3",
     "@rushstack/eslint-patch": "^1.8.0",
     "@vitejs/plugin-vue": "^5.0.5",
     "@vue/eslint-config-prettier": "^9.0.0",
@@ -25,8 +30,14 @@
     "eslint-plugin-vue": "^9.23.0",
     "jsdom": "^24.1.0",
     "prettier": "^3.2.5",
+    "sass-embedded": "^1.78.0",
+    "stylelint": "^16.9.0",
+    "stylelint-config-recommended-vue": "^1.5.0",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-order": "^6.0.4",
     "vite": "^5.3.1",
     "vite-plugin-vue-devtools": "^7.3.1",
-    "vitest": "^1.6.0"
+    "vitest": "^1"
   }
 }
